@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-gold: #D4AF37;
+  --color-brand-pink: #F2D2D8;
+  --color-brand-dark: #2C2C2C;
+  --color-brand-light: #FAFAFA;
+  --color-brand-muted: #8A8A8A;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-light text-brand-dark font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-gold text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition-colors duration-300 font-medium tracking-wide shadow-md;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-brand-gold text-brand-gold px-6 py-3 rounded-full hover:bg-brand-gold hover:text-white transition-colors duration-300 font-medium tracking-wide;
+  }
+
+  .input-field {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-gold focus:ring-brand-gold sm:text-sm p-3 border;
+  }
+}
